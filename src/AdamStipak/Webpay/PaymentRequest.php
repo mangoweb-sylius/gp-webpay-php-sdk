@@ -79,4 +79,22 @@ class PaymentRequest {
   public function setDescription($value){
     $this->params['DESCRIPTION'] = $value;
   }
+
+  /**
+   * Add Payment Method parameter to request fields
+   *
+   * @param string  $value field value
+   */
+  public function setPreferredPaymentMethod($value){
+      $this->params['PAYMETHOD'] = $value;
+  }
+
+  /**
+   * Add Payment Methods parameter to request fields
+   *
+   * @param string  $value field value
+   */
+  public function setAllowedPaymentMethods($value){
+      $this->params['PAYMETHODS'] = $value;
+  }
 }
